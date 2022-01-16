@@ -1,0 +1,22 @@
+<div class="main-component">
+
+    <div class="width100pt" style="padding: 12px 0px; border-bottom: 1px solid #adadad;">
+        <div style="width: 70%; margin: auto;">
+            <div class="marginAuto displayFlex" style="width: max-content; box-shadow: 1px 1px 8px 0px #999;">
+                <input class="input searchInput" [(ngModel)]="fs.searchText" placeholder="SEARCH BY LOCATION">
+                <div class="search-icon-container bgColorBlue">
+                    <img src="./../../../../assets/images/search.png" (click)="onChangeSearchText()">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="width100pt displayFlex" style="">
+        <div class="filterPane">
+            <app-filter></app-filter>
+        </div>
+        <div class="mapsListPane">
+            <app-maps-list></app-maps-list>
+        </div>
+    </div>
+</div>

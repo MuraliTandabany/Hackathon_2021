@@ -1,0 +1,49 @@
+
+
+
+
+.searchInput {
+    width: 500px;
+    height: 61px;
+    border: 2px solid #adadad;
+    font-size: 20px;
+    padding: 0px 12px;
+    // border-right: none;
+}
+.searchInput:focus-visible {
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+.search-icon-container {
+    padding: 12px;
+    height: 37px;
+    aspect-ratio: 1;
+    box-sizing: content-box;
+    cursor: pointer;
+}
+.search-icon-container img {
+    width: -webkit-fill-available;
+    width: -moz-fill-available;
+    width: -o-fill-available;
+    width: -ms-fill-available;
+}
+
+
+
+
+
+.filterPane {
+    width: 300px;
+    border-right: 1px solid #adadad;
+}
+.mapsListPane {
+    width: calc(100% - 300px);
+}

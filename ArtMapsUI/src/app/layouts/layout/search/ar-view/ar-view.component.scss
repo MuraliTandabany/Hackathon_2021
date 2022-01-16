@@ -1,0 +1,25 @@
+.mapInArCanvas {
+    position: absolute;
+    width: 250px;
+}
+
+.moveButtons {
+    cursor: pointer;
+}
+
+.moveArrowContainer {
+    border-radius: 3px;
+    border: 1px solid #999;
+    width: 25px;
+    height: 25px;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+.moveArrowContainer.empty {
+    border-color: transparent;
+}

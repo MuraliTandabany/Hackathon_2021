@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>MyTopo - Art Maps</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+
+  <!-- <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script> -->
+
+  <!-- <script src="./assets/js/three.js"></script>
+  <script type="module">
+        import { OrbitControls } from './assets/js/orbitcontrol.js';
+        import * as THREE from './assets/js/three.module.js';
+
+        let camera, scene, renderer;
+        let mesh;
+
+        init();
+        render();
+
+        function init() {
+
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.outputEncoding = THREE.sRGBEncoding;
+            document.body.appendChild(renderer.domElement);
+
+            scene = new THREE.Scene();
+
+            camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
+            camera.position.set(0, 0, 1);
+            camera.lookAt(scene.position);
+
+            const controls = new OrbitControls(camera, renderer.domElement);
+            controls.addEventListener('change', render);
+
+            // const geometry = flipY(new THREE.PlaneBufferGeometry());
+            // const material = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide });
+
+            const geometry = flipY(new THREE.PlaneBufferGeometry());
+            const texture = new THREE.TextureLoader().load('./assets/images/maps/mumbai.png');
+            const material = new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: texture });
+
+            mesh = new THREE.Mesh(geometry, material);
+
+            scene.add(mesh);
+
+            window.addEventListener('resize', onWindowResize);
+
+        }
+
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            render();
+        }
+
+        function render() {
+            renderer.render(scene, camera);
+        }
+
+        /** Correct UVs to be compatible with `flipY=false` textures. */
+        function flipY(geometry) {
+            const uv = geometry.attributes.uv;
+            for (let i = 0; i < uv.count; i++) {
+                uv.setY(i, 1 - uv.getY(i));
+            }
+            return geometry;
+        }
+  </script> -->
+
+</head>
+<body class="mat-typography">
+  <app-root></app-root>
+</body>
+
+</html>

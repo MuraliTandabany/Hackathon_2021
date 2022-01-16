@@ -1,0 +1,119 @@
+$topNavHeight: 70px;
+
+body {
+    margin: 0px;
+    font-size: 14px;
+    color: #252A2E;
+}
+#arjsDebugUIContainer {
+    display: none;
+}
+*, button:focus-visible {
+    outline: none !important;
+}
+mat-icon {
+  cursor: pointer;
+}
+
+
+
+
+.bgColorBlue {
+    background-color: rgba(0, 95, 158);
+}
+
+.bgColorLightBlue {
+    background-color: #009AD9;
+}
+
+.colorBlue {
+    color: #005f9e;      /* #005f9e */
+}
+
+.colorYellow {
+    color: #FFBE00;
+}
+
+.nav {
+    display: flex;
+    padding: 0px 20px;
+    width: 100%;
+    height: $topNavHeight;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    color: white;
+    font-size: 26px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav mat-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 40px;
+    color: white;
+}
+
+.main-component {
+    margin-top: $topNavHeight;
+}
+
+.footer {
+    height: 70px;
+    padding: 24px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
+    width: 100%;
+    color: white;
+    background-color: #005f9ed1;
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.checkboxOption {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.width100pt { width: 100%; }
+
+.marginAuto {
+    margin: auto;
+}
+
+.displayFlex { display: flex; }
+.displayFlex.column { display: flex; flex-direction: column;}
+.displayFlex.right { justify-content: flex-end; }
+.displayBlock { display: block; }
+
+.floatRight { float: right; }
+.floatLeft { float: left; }
+
+.cursorPointer { cursor: pointer; }

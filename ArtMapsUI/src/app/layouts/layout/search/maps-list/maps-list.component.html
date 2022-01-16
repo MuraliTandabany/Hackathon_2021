@@ -1,0 +1,68 @@
+<div class="mapsListDiv">
+    <div class="sortSelectionDiv">
+        <div class="displayFlex right">
+          <div>
+            <div class="addToCart goToCart" (click)="onClickCart()">Cart</div>
+          </div>
+          <div class="sorting displayFlex right">
+                <div class="label">SORT BY : </div>
+                <div>
+                    <select>
+                        <ng-container *ngFor="let sortOption of fs.sortOptions">
+                            <option [value]="sortOption.value">{{sortOption.label}}</option>
+                        </ng-container>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="cardsContainer">
+          <ng-container *ngIf="!fs.searchCallPending">
+            <ng-container *ngFor="let mapInfo of fs.data; trackBy:trackByIndex">
+              <div class="mapCardContainer" *ngIf="mapInfo.display">
+                <div class="mapCard">
+                  <!-- <div class="arIconDiv">AR</div> -->
+                  <div class="head">
+                    <img [src]="mapInfo.imgPath" />
+                  </div>
+                  <div class="content">
+                    <div class="field name">{{mapInfo.name}}</div>
+                    <div class="field category">{{fs.typeLabelMap[mapInfo.type]}}</div>
+                    <div class="field prices">
+                      <span class="price">{{mapInfo.unit}} {{mapInfo.price}}</span>
+                      <ng-container *ngIf="mapInfo.price !== mapInfo.sellingPrice">
+                        <span class="sellingPrice">{{mapInfo.unit}} {{mapInfo.sellingPrice}}</span>
+                      </ng-container>
+                      <ng-container *ngIf="mapInfo.discount">
+                        <span class="discount">({{mapInfo.discount}}% off)</span>
+                      </ng-container>
+                    </div>
+                    <div class="field labels">
+                      <ng-container *ngFor="let label of mapInfo.labels"><span class="labelField {{label.value}}">{{label.label}}</span></ng-container>
+                    </div>
+                  </div>
+                  <div class="foot">
+                    <div class="field">
+                      <!-- <mat-icon aria-label="Add" *ngIf="mapInfo.cartSize > 0" (click)="onClickAdd(mapInfo)">add</mat-icon> -->
+                      <div class="addToCart" (click)="onClickAddToCart(mapInfo)">Add to cart<span *ngIf="mapInfo.cartSize > 0">({{mapInfo.cartSize}})</span></div>
+                      <!-- <mat-icon aria-label="Remove" *ngIf="mapInfo.cartSize > 0" (click)="onClickRemove(mapInfo)">remove</mat-icon> -->
+                    </div>
+                    <div class="field">
+                      <div class="arOpen" (click)="onClickOpenAr(mapInfo)">Try Now</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+            <ng-container *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 7, 6, 5, 4, 3, 2, 1]">
+              <div class="mapCardContainer fill">
+              </div>
+            </ng-container>
+          </ng-container>
+          <ng-container *ngIf="fs.searchCallPending">
+            <img style="position: absolute; top: 45%; left: 50%" src="./../../../../../assets/images/loading.gif">
+          </ng-container>
+        </div>
+    </div>
+</div>

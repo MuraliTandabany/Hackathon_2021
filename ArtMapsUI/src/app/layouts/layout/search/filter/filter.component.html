@@ -1,0 +1,69 @@
+<div class="filterDiv width100pt">
+    <div class="title">
+        <div>FILTERS</div>
+        <!-- <button (click)="printOptions()">Print</button> -->
+        <button class="reset" (click)="onClickFilterReset()">RESET</button>
+    </div>
+
+    <div class="content">
+        <div class="filter">
+            <div class="filterLabel">
+                <div class="title">Type</div>
+            </div>
+            <div class="filterOptions">
+                <ul class="list">
+                    <ng-container *ngFor="let typeOption of fs.options.type">
+                        <li class="checkboxOption">
+                            <input type="checkbox" name="typeFilter{{typeOption.value}}" [(ngModel)]="typeOption.checked" (change)="onChangeFilter()">
+                            <div>{{typeOption.label}}</div>
+                        </li>
+                    </ng-container>
+                </ul>
+            </div>
+        </div>
+        <div class="filter">
+            <div class="filterLabel">
+                <div class="title">Size</div>
+            </div>
+            <div class="filterOptions">
+                <ul class="list">
+                    <ng-container *ngFor="let sizeOption of fs.options.size">
+                        <li class="checkboxOption">
+                            <input type="checkbox" name="sizeFilter{{sizeOption.value}}" [(ngModel)]="sizeOption.checked" (change)="onChangeFilter()">
+                            <div>{{sizeOption.label}}</div>
+                        </li>
+                    </ng-container>
+                </ul>
+            </div>
+        </div>
+        <div class="filter">
+            <div class="filterLabel">
+                <div class="title">Colour</div>
+            </div>
+            <div class="filterOptions">
+                <ul class="list">
+                    <ng-container *ngFor="let colorOption of fs.options.color">
+                        <li class="checkboxOption">
+                            <input type="checkbox" name="colorFilter{{colorOption.value}}" [(ngModel)]="colorOption.checked" (change)="onChangeFilter()">
+                            <div>{{colorOption.label}}</div>
+                        </li>
+                    </ng-container>
+                </ul>
+            </div>
+        </div>
+        <div class="filter">
+            <div class="filterLabel">
+                <div class="title">Shipping</div>
+            </div>
+            <div class="filterOptions">
+                <ul class="list">
+                    <li class="checkboxOption">
+                        <input type="checkbox" name="freeShipping" [(ngModel)]="fs.options.freeShipping" (change)="onChangeFilter()">
+                        <div>Free Shipping</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>

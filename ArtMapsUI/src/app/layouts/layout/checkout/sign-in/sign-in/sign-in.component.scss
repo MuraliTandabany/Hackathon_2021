@@ -1,0 +1,21 @@
+.mat-button {
+  background-color: #005f9e;
+  color: white;
+}
+
+.container {
+  padding: 2%;
+}
+.signin-container {
+  border-left: 1px solid grey;
+  transition: opacity 0.5s linear;
+}
+
+/*Mobile*/
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="signin-container"] {
+        border-left: 0;
+        border-top: 1px solid grey;
+    }
+  }

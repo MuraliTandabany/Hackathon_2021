@@ -1,0 +1,214 @@
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #a8a8a8;
+    border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #858585;
+    border-radius: 10px;
+}
+
+
+.sortSelectionDiv {
+    padding: 20px 40px 0px 8px;
+}
+
+.goToCart {
+  width: max-content;
+  padding: 8px 15px !important;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.sorting {
+    border-radius: 30px;
+    border: 1px solid #999999;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.sorting select {
+    border: 0px;
+    // background-color: #999999;
+    cursor: pointer;
+}
+
+
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    // height: calc(100vh - 258px);
+    // overflow: auto;
+    padding: 0px 10px;
+}
+.mapCardContainer, .mapCardContainer * {
+    transition: transform 0.1s;
+}
+
+.mapCardContainer {
+    min-width: 250px;
+    // max-width: 100%;
+    max-width: 280px;
+    min-height: 445px;
+
+    flex: 1;
+    position: relative;
+
+
+    margin: 20px 0px 0px 20px;
+    border: 2px solid #005F9E;
+    box-shadow: 3px 3px 8px 0px #ccc;
+}
+.mapCardContainer:hover {
+    transform: scale(1.04);
+}
+// .mapCardContainer:hover .mapCard .head:hover {
+//     border: 2px solid #005F9E;
+//     transform: scale(1.5);
+//     z-index: 999;
+// }
+.mapCard {
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+}
+
+.mapCard:hover .arIconDiv {
+    // display: block;
+}
+.arIconDiv {
+    // display: none;
+    position: absolute;
+    width: max-content;
+    right: 10px;
+    font-weight: 500;
+    padding: 3px 6px;
+    border-radius: 2px;
+    background: green;
+    color: white;
+    cursor: pointer;
+    animation: blinkGreen 1s infinite;
+}
+@keyframes blinkGreen {
+    0% {background-color: #00a100;}
+    25% {background-color: #006d00;}
+    50% {background-color: #005a00;}
+    75% {background-color: #006d00;}
+    100% {background-color: #00a100;}
+  }
+.mapCardContainer.fill {
+    min-height: 0px !important;
+    max-height: 0px !important;
+    padding: 0px;
+    border: none;
+}
+.mapCard .head {
+    display: flex;
+    align-items: center;
+    height: 250px;
+}
+.mapCard .head img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.field {
+    padding: 2px 10px;
+    font-weight: 500;
+}
+.field.name {
+    font-size: 18px;
+    color: #005F9E;
+}
+.field.category {
+    font-size: 13px;
+    font-weight: 400;
+    font-style: italic;
+}
+.field.prices {
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+.field.prices span {
+    margin-right: 10px;
+}
+.field .price {
+    color: green;
+}
+.field .sellingPrice {
+    text-decoration: line-through;
+    color: red;
+    font-size: 13px;
+}
+.field .discount {
+    color: grey;
+    font-size: 13px;
+}
+.field.labels {
+    height: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.labelField {
+    border-radius: 12px;
+    padding: 4px 8px;
+    margin-right: 12px;
+    font-weight: 400;
+}
+.labelField.bestSeller {
+    border: 3px solid #ffbe00;
+}
+.labelField.freeDelivery {
+    background: lightgray;
+    // border: 1px solid grey;
+}
+
+
+.foot > div {
+    margin-top: 8px;
+}
+.foot > .field > div {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 500;
+    margin: auto;
+    width: 80%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.arOpen {
+    padding: 5px 6px;
+    color: #005F9E;
+    border: 3px solid #005F9E;
+}
+
+.addToCart {
+    color: white;
+    background: #005F9E;
+    padding: 8px 6px;
+}
+
+.mapCard mat-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 40px;
+    margin-top: -6px;
+    color: #005F9E;
+}

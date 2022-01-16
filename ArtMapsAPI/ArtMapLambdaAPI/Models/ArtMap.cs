@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ArtMapLambdaAPI.Models
+{
+    public class ArtMap
+    {
+        public string FileName { get; set; }
+        public string FilePath { get; set; }
+        public string CountryName { get; set; }
+        public byte[] FileContent { get; set; }
+    }
+}

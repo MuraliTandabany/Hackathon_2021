@@ -1,0 +1,62 @@
+.mapCard {
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+}
+
+
+.mapCard .head {
+    display: flex;
+    align-items: center;
+    height: 250px;
+}
+.mapCard .head img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.field {
+    padding: 2px 10px;
+    font-weight: 500;
+}
+.field.name {
+    font-size: 18px;
+    color: #005F9E;
+}
+.field.category {
+    font-size: 13px;
+    font-weight: 400;
+    font-style: italic;
+}
+.field.prices {
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+.field.prices span {
+    margin-right: 10px;
+}
+.field .price {
+    color: green;
+}
+.field .sellingPrice {
+    text-decoration: line-through;
+    color: red;
+    font-size: 13px;
+}
+.field .discount {
+    color: grey;
+    font-size: 13px;
+}
+.field.labels {
+    height: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+a{
+    color: black;
+}

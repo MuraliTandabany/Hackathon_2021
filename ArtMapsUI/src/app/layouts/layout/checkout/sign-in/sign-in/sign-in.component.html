@@ -1,0 +1,50 @@
+<section class="py-5">
+  <div class="container px-4 px-lg-5 my-5 main-component">
+    <div class="row px-lg-5">
+      <div class="col-md-5 order-md-1 mb-4 px-lg-5">
+        <div class="guest-checkout">
+          <h2 class="mb-3">New Customer</h2>
+          <p>You can create an account when you check out.</p>
+          <div class="mb-3"><button justify-content-md-center type="button" mat-button (click)="guestCheckoutClick()" >GUEST CHECKOUT</button></div>
+        </div>
+      </div>
+
+      <div id="signinContainer" class="signin-container col-md-7 order-md-2 px-lg-5">
+        <h2 class="mb-3">Returning Customer</h2>
+        <form class="needs-validation" [formGroup]="SignInFormGroup" (submit)="signIn()" novalidate>
+          <div class="row">
+            <div class="col-md-12 mb-3">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email" placeholder="you@example.com" />
+                <div *ngIf="requiredFieldMissing" style="color: red;">
+                  Please enter a valid email address.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" formControlName="password" placeholder="" required />
+              <div *ngIf="requiredFieldMissing" style="color: red;">
+                Please enter password
+              </div>
+            </div>
+            <div class="col-md-8 mb-3">
+              <div class=" mb-3">
+                <button class="signInRegister" *ngIf="isSignIn" justify-content-md-center type="button" mat-button (click)="signIn()" >SIGN IN</button>
+                <button class="signInRegister" *ngIf="!isSignIn" justify-content-md-center type="button" mat-button (click)="onClickRegister()">REGISTER</button>
+              </div>
+              <div *ngIf="isSignInFailed" style="color: red;">
+                Invalid credentials
+              </div>
+            </div>
+          </div>
+        </form>
+        <hr class="mb-4" />
+        <h4 class="mb-3"><label class="form-check-label" for="same-address">Don't have an account? It's Free!</label></h4>
+            <div class="mb-3 cursorPointer" *ngIf="isSignIn" (click)="onClickCreateAccount()">Create an account</div>
+            <div class="mb-3 cursorPointer" *ngIf="!isSignIn" (click)="onClickHaveAccount()">I already have a account</div>
+      </div>
+    </div>
+  </div>
+</section>

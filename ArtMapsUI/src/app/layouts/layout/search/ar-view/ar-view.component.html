@@ -1,0 +1,60 @@
+<iframe id="arview-iframe" src="./../../../../../assets/iframe/frame.html" style="width: 100%; height: calc(100% - 100px);">
+</iframe>
+
+<canvas #mapInArCanvas class="mapInArCanvas" id="mapInArCanvas" style="height: 700px; width: 700px" style.top.%="{{top}}"
+style.left.%="{{left}}" ></canvas>
+
+<!-- full screen camera Issue -->
+<!--<a-scene embedded>-->
+<!--    <a-marker>-->
+<!--        <a-image id="ar-image" position="0 0 0" rotation="270 0 0" scale="4 4 4" src="./../../../../../assets/images/maps/mumbai.png">-->
+<!--        </a-image>-->
+<!--    </a-marker>-->
+<!--    <a-entity camera></a-entity>-->
+<!--</a-scene>-->
+
+
+<!-- <img #mapInArCanvas id="mapInArCanvas" class="mapInArCanvas"
+    style.top.%="{{top}}"
+    style.left.%="{{left}}"
+    src="./../../../../../assets/images/maps/mumbai.png"> -->
+
+
+
+<!-- <model-viewer style="position: absolute; top: 20%; left: 30%;"
+    alt="Neil Armstrong's Spacesuit from the Smithsonian Digitization Programs Office and National Air and Space Museum"
+    src="./../../../../../assets/glb/boom.glb" ar ar-modes="webxr scene-viewer quick-look"
+    environment-image="shared-assets/environments/moon_1k.hdr" poster="assets/NeilArmstrong.webp" seamless-poster
+    shadow-intensity="1" camera-controls>
+</model-viewer> -->
+
+
+
+<div class="positionChanger">
+    <div class="displayFlex column">
+        <div class="displayFlex">
+            <div class="moveArrowContainer empty"></div>
+            <div class="moveArrowContainer">
+                <mat-icon aria-label="Top" class="moveButtons" style="transform: rotate(270deg);" (click)="onClickTop()">play_arrow</mat-icon>
+            </div>
+            <div class="moveArrowContainer empty"></div>
+        </div>
+        <div class="displayFlex">
+            <div class="moveArrowContainer">
+                <mat-icon aria-label="Left" class="moveButtons" style="transform: rotate(180deg);" (click)="onClickLeft()">play_arrow</mat-icon>
+            </div>
+            <div class="moveArrowContainer empty"></div>
+            <div class="moveArrowContainer">
+                <mat-icon aria-label="Right" class="moveButtons" style="transform: rotate(0deg);" (click)="onClickRight()">play_arrow</mat-icon>
+            </div>
+
+        </div>
+        <div class="displayFlex">
+            <div class="moveArrowContainer empty"></div>
+            <div class="moveArrowContainer">
+                <mat-icon aria-label="Bottom" class="moveButtons" style="transform: rotate(90deg);" (click)="onClickBottom()">play_arrow</mat-icon>
+            </div>
+            <div class="moveArrowContainer empty"></div>
+        </div>
+    </div>
+</div>
